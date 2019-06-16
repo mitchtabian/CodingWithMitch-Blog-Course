@@ -8,7 +8,10 @@
 	<h1>This is the body</h1>
 	<p>Here is where you put stuff that should be in the body of your website.</p>
 
-	{% include 'personal/snippets/body_snippet.html' %}
+	{% for list_item in list_of_values %}
+		{% include 'personal/snippets/body_snippet.html' with value=list_item %}
+	{% endfor %}
+
 
 </div>
 
