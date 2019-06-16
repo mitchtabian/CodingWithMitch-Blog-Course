@@ -1,17 +1,27 @@
 <!DOCTYPE html>
-<html lang=en>
+<html>
 
 <head>
-<h1>This is the Header</h1>
-
+	<title>This is the title</title>
+	<div style="border: 2px solid #000;">
+		<h1>This is the header</h1>
+	</div>
+	
 </head>
 
 <body>
-<h2>This is the body</h2>
+{% block content %}
+
+{% endblock content %}
 </body>
 
 <footer>
-	<h2>This is the footer</h2>
+	<div style="border: 2px solid #000;">
+		<h3>This is the footer</h3>
+	</div>
 </footer>
-
 </html>
+
+
+
+
