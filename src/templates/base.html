@@ -3,7 +3,7 @@
 
 <head>
 	{% if request.user.is_authenticated %}
-	<p><a href="{% url 'home' %}">Home</a> | <a href="{% url 'logout' %}">Logout</a></p>
+	<p><a href="{% url 'home' %}">Home</a> | <a href="{% url 'account' %}">Account</a> | <a href="{% url 'logout' %}">Logout</a></p>
 	<p>Hello, {{request.user.username}}</p>
 	{% else %}
 	<p><a href="{% url 'home' %}">Home</a> | <a href="{% url 'register' %}">Register</a> | <a href="{% url 'login' %}">Login</a></p>
