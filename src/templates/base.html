@@ -2,9 +2,13 @@
 <html lang=en>
 
 <head>
-	<div style="border: 2px solid #000;">
-		<h1>This is the Header</h1>
-	</div>
+	{% if request.user.is_authenticated %}
+	<p>Hello, {{request.user.username}} | <a href="{% url 'logout' %}">Logout</a></p>
+	{% else %}
+	<p><a href="{% url 'register' %}">Register</a> | <a href="#">Login</a></p>
+	{% endif %}
+	<hr>
+	
 </head>
 
 <body>
@@ -16,9 +20,8 @@
 </body>
 
 <footer>
-	<div style="border: 2px solid #000;">
-		<h2>This is the footer</h2>
-	</div>
+	<hr>
+	<p>CodingWithMitch Blog Course | 2019</p>
 </footer>
 
 </html>
