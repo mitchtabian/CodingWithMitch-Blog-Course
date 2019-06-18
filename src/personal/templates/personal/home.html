@@ -8,8 +8,8 @@
 	<p>Here is where you put stuff that should be in the body of your websites.</p>
 
 
-	{% for question in questions %}
-		{% include 'personal/snippets/body_snippet.html' with value=question %}
+	{% for user in accounts %}
+		{{user}}<br>
 	{% endfor %}
 
 	
