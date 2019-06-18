@@ -3,16 +3,16 @@
 
 {% block content %}
 
-<div style="border: 2px solid #000;">
-	<h1>This is the body</h1>
-	<p>Here is where you put stuff that should be in the body of your websites.</p>
+
+<h1>This is the body</h1>
+<p>Here is where you put stuff that should be in the body of your websites.</p>
 
 
-	{% for user in accounts %}
-		{{user}}<br>
-	{% endfor %}
+{% for user in accounts %}
+	{{user}}<br>
+{% endfor %}
 
-	
-</div>
+
+
 
 {% endblock content %}
