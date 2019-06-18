@@ -4,18 +4,15 @@
 {% block content %}
 
 <div style="border: 2px solid #000;">
-	
 	<h1>This is the body</h1>
-	<p>Here is where you put stuff that should be in the body of your website.</p>
+	<p>Here is where you put stuff that should be in the body of your websites.</p>
 
-	{% for list_item in questions %}
-		{% include 'personal/snippets/body_snippet.html' with value=list_item %}
+
+	{% for question in questions %}
+		{% include 'personal/snippets/body_snippet.html' with value=question %}
 	{% endfor %}
 
-
+	
 </div>
 
 {% endblock content %}
-
-
-
