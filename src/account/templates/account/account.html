@@ -3,30 +3,34 @@
 
 {% block content %}
 
-  <h2>Account</h2>
-  <form method="post">
-    {% csrf_token %}
-    {% for field in account_form %}
-      <p>
-        {{ field.label_tag }}<br>
-        {{ field }}
-        {% if field.help_text %}
-          <small style="color: grey">{{ field.help_text }}</small>
-        {% endif %}
-        {% for error in field.errors %}
-          <p style="color: red">{{ error }}</p>
-        {% endfor %}
-      </p>
-    {% endfor %}
-    {% if account_form.non_field_errors %}
-    	<div style="color: red">
-    		<p>{{account_form.non_field_errors}}</p>
-    	</div>
-      	
-    {% endif %}
-    <button type="submit">Save changes</button>
-  </form>
+<h2>Account</h2>
+<form method="post">{% csrf_token %}
+	{% for field in account_form %}
+		<p>
+			{{field.label_tag}}
+			{{field}}
+
+			{% if field.help_text %}
+				<small style="color: grey;">{{field.help_text}}</small>
+			{% endif %}
+
+		</p>
+	{% endfor %}
+
+	{% for field in account_form %}
+		{% for error in field.errors %}
+			<p style="color: red;">{{error}}</p>
+		{% endfor %}
+	{% endfor %}
+	
+	{% if account_form.non_field_errors %}
+		<div style="color:red;">
+			<p>{{account_form.non_field_errors}}</p>
+		</div>
+	{% endif %}
+	<button type="submit">Save changes</button>
+	
+</form>
+
 
 {% endblock content %}
-
-
