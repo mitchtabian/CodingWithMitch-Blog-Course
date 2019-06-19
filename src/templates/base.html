@@ -2,27 +2,34 @@
 <html lang=en>
 
 <head>
-	{% if request.user.is_authenticated %}
-	<p><a href="{% url 'home' %}">Home</a> | <a href="{% url 'account' %}">Account</a> | <a href="{% url 'logout' %}">Logout</a></p>
-	<p>Hello, {{request.user.username}}</p>
-	{% else %}
-	<p><a href="{% url 'home' %}">Home</a> | <a href="{% url 'register' %}">Register</a> | <a href="{% url 'login' %}">Login</a></p>
-	{% endif %}
-	<hr>
+	<!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	
 </head>
 
 <body>
 
-{% block content %}
+{% include 'snippets/header.html' %}
 
-{% endblock content %}
+<!-- Body -->
+<style type="text/css">
+	.main{
+		min-height: 100vh;
+		height: 100%;
+	}
+</style>
+<div class="main">
+	{% block content %}
+
+	{% endblock content %}
+</div>
+<!-- End Body -->
+
+{% include 'snippets/footer.html' %}
 
 </body>
 
-<footer>
-	<hr>
-	<p>CodingWithMitch Blog Course | 2019</p>
-</footer>
 
 </html>
