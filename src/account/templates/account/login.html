@@ -5,14 +5,12 @@
 
 <style type="text/css">
   .form-signin {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: auto;
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
   }
-  .form-signin .checkbox {
-    font-weight: 400;
-  }
+
   .form-signin .form-control {
     position: relative;
     box-sizing: border-box;
@@ -39,28 +37,32 @@
 </style>
 
 
+<form class="form-signin" method="post">{% csrf_token %}
 
-<form method="post" class="form-signin">{% csrf_token %}
   <h1 class="h3 mb-3 font-weight-normal">Login</h1>
 
-  <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
-
-  <input type="password" id="inputPassword" name="password" class="form-control" placeholder="Password" required>
+  <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
   
-  <p>
-    {% for field in login_form %}
-      {% for error in field.errors %}
-            <p style="color: red">{{ error }}</p>
-      {% endfor %}
-    {% endfor %}
-    {% if login_form.non_field_errors %}
-      <div style="color: red">
-        <p>{{login_form.non_field_errors}}</p>
-      </div>
-    {% endif %}
-  </p>
+  <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+
+  {% for field in login_form %}
+      <p>
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+  {% endfor %}
+  {% if login_form.non_field_errors %}
+    <div style="color: red">
+      <p>{{login_form.non_field_errors}}</p>
+    </div>
+      
+  {% endif %}
+
   <button class="btn btn-lg btn-primary btn-block" type="submit">Log in</button>
+
 </form>
+
 
 {% endblock content %}
 

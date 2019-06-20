@@ -5,14 +5,12 @@
 
 <style type="text/css">
   .form-signin {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: auto;
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
   }
-  .form-signin .checkbox {
-    font-weight: 400;
-  }
+
   .form-signin .form-control {
     position: relative;
     box-sizing: border-box;
@@ -28,7 +26,7 @@
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
-  .form-signin input[type="text"] {
+  .form-signin input[type="username"] {
     margin-bottom: 10px;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
@@ -38,32 +36,37 @@
   }
 </style>
 
-<form method="post" class="form-signin">{% csrf_token %}
+
+<form class="form-signin" method="post">{% csrf_token %}
+
   <h1 class="h3 mb-3 font-weight-normal">Account</h1>
 
-  <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus value="{{account_form.initial.email}}">
-
-  <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Username" required value="{{account_form.initial.username}}">
+  <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus value={{account_form.initial.email}}>
   
-  <p>
-    {% for field in account_form %}
-      {% for error in field.errors %}
-            <p style="color: red">{{ error }}</p>
-      {% endfor %}
-    {% endfor %}
-    {% if account_form.non_field_errors %}
-      <div style="color: red">
-        <p>{{account_form.non_field_errors}}</p>
-      </div>
-    {% endif %}
+  <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required
+  value="{{account_form.initial.username}}">
 
-    {% if success_message %}
-      <p style="color: green; text-align: center;">{{ success_message }}</p>
-    {% endif %}
-  </p>
+  {% for field in account_form %}
+      <p>
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+  {% endfor %}
+  {% if account_form.non_field_errors %}
+    <div style="color: red">
+      <p>{{account_form.non_field_errors}}</p>
+    </div>
+      
+  {% endif %}
+
+  {% if success_message %}
+    <p style="color:green; text-align: center;">{{success_message}}</p>
+  {% endif  %}
+
   <button class="btn btn-lg btn-primary btn-block" type="submit">Save changes</button>
-</form>
 
+</form>
 
 
 {% endblock content %}

@@ -2,16 +2,16 @@
 
 
 {% block content %}
+
+
 <style type="text/css">
   .form-signin {
-    width: 100%;
-    max-width: 330px;
-    padding: 15px;
-    margin: auto;
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
   }
-  .form-signin .checkbox {
-    font-weight: 400;
-  }
+
   .form-signin .form-control {
     position: relative;
     box-sizing: border-box;
@@ -37,35 +37,42 @@
     border-top-left-radius: 0;
     border-top-right-radius: 0;
   }
+
   .h3{
     text-align: center;
   }
+
 </style>
 
-<form method="post" class="form-signin">{% csrf_token %}
+
+<form class="form-signin" method="post">{% csrf_token %}
+
   <h1 class="h3 mb-3 font-weight-normal">Register an account</h1>
 
-  <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email address" required autofocus>
+  <input type="email" name="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
 
-  <input type="text" id="inputUsername" name="username" class="form-control" placeholder="Username" required>
+  <input type="text" name="username" id="inputUsername" class="form-control" placeholder="Username" required>
+  
+  <input type="password" name="password1" id="inputPassword1" class="form-control" placeholder="Password" required>
 
-  <input type="password" id="inputPassword1" name="password1" class="form-control" placeholder="Password" required>
+  <input type="password" name="password2" id="inputPassword2" class="form-control" placeholder="Confirm password" required>
 
-  <input type="password" id="inputPassword2" name="password2" class="form-control" placeholder="Confirm password" required>
+  {% for field in registration_form %}
+      <p>
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+  {% endfor %}
+  {% if registration_form.non_field_errors %}
+    <div style="color: red">
+      <p>{{registration_form.non_field_errors}}</p>
+    </div>
+      
+  {% endif %}
 
-  <p>
-    {% for field in registration_form %}
-      {% for error in field.errors %}
-            <p style="color: red">{{ error }}</p>
-      {% endfor %}
-    {% endfor %}
-    {% if registration_form.non_field_errors %}
-      <div style="color: red">
-        <p>{{registration_form.non_field_errors}}</p>
-      </div>
-    {% endif %}
-  </p>
   <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+
 </form>
 
 
