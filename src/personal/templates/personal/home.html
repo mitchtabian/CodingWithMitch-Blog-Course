@@ -3,23 +3,13 @@
 
 {% block content %}
 
-<div class="pricing-header px-3 py-3 pt-md-5 pb-md-4 mx-auto text-center">
-  <h1 class="display-4">CodingWithMitch Blog</h1>
-  <p class="lead">In this course you'll learn how to build a simple blog with user registration and blog CRUD functionality. Django is a powerful 
-  framework and you'll see why in this course.</p>
-</div>
-<hr>
-
-<div class="container">
-	<div class="d-flex flex-column">
-		<h4>Registered users:</h1>
-		{% for user in accounts %}
-			<p>{{user}}</p>
-		{% endfor %}
-	</div>
-</div>
-
-
+<h3>Registered users:</h3>
+{% for account in accounts %}
+	<p>{{account}}</p>
+{% endfor %}
 
 
 {% endblock content %}
+
+
+
