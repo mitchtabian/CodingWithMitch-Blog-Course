@@ -3,13 +3,13 @@
 
 {% block content %}
 
-
-<h1>Registered users:</h1>
-{% for user in accounts %}
-	{{user}}<br>
+<h3>Registered users:</h3>
+{% for account in accounts %}
+	<p>{{account}}</p>
 {% endfor %}
 
 
-
-
 {% endblock content %}
+
+
+
