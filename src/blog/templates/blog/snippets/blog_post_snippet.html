@@ -1,21 +1,21 @@
 <style type="text/css">
 	.card{
 		max-width: 700px;
+		width: 100%;
 	}
 	.card-body{
 		padding: 20px;
 	}
 </style>
 
+{% if blog_post %}
 <div class="container">
 	<div class="row">
-
 		<!-- Blog Post -->
 		<div class="card m-auto">
 			<a href="{% url 'blog:detail' post.slug %}">
 				<img class="card-img-top" src="{{blog_post.image.url}}">
 			</a>
-			
 			<div class="card-body mt-2 mb-2">
 				<a href="{% url 'blog:detail' post.slug %}">
 					<h2 class="card-title">{{blog_post.title}}</h2>
@@ -31,3 +31,18 @@
 		</div>
 	</div>
 </div>
+
+{% else %}
+
+<div class="container">
+	<div class="row">
+		<div class="card m-auto">
+			<div class="card-body mt-2 mb-2">
+				<h2 class="card-title">No results</h2>
+				<p class="card-text">There were no results matching the search: "{{query}}"</p>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% endif %}
