@@ -64,3 +64,6 @@ def edit_blog_view(request, slug):
 	context['form'] = form
 
 	return render(request, 'blog/edit_blog.html', context)
+
+
+

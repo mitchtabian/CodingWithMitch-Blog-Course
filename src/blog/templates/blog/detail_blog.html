@@ -2,12 +2,14 @@
 
 
 {% block content %}
+
+
 <style type="text/css">
 	.card{
 		max-width: 700px;
 	}
-	.container{
-		padding:20px;
+	.card-body{
+		padding: 20px;
 	}
 </style>
 
@@ -25,7 +27,7 @@
 			  {% endif %}
 			</div>
 			<div class="card-footer text-muted">
-			  Posted on {{blog_post.date_published}} by {{blog_post.author}}
+			  Updated on {{blog_post.date_updated}} by {{blog_post.author}}
 			</div>
 		</div>
 	</div>
