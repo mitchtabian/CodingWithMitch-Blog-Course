@@ -17,7 +17,7 @@
 </ul>
 
 
-<p>When this course is complete, I will show you how to:</p>
+<p><strong>When this course is complete, I will show you how to:</strong></p>
 <ol>
 <li><a href="https://codingwithmitch.com/courses/hosting-a-django-website-with-digital-ocean/hosting-django-website-digital-ocean/" target="_blank">Host your Website with Digital Ocean</a></li>
 <li><a href="https://codingwithmitch.com/courses/hosting-a-django-website-with-digital-ocean/registering-domain-name-namecheap/" target="_blank">Register a Custom Domain</a></li>
@@ -25,5 +25,10 @@
 <li><a href="#" target="_blank">Object Storage with Django (Digital Ocean Spaces S3 &amp; AWS)</a> <strong class="text-warning">(In progress)</strong></li>
 <li><a href="#" target="_blank">Send Emails with Django for Password Reset</a> <strong class="text-warning">(In progress)</strong></li>
 </ol>
+<br>
+<p><strong>Then we'll take development to the next level by:</strong></p>
+<ol>
+<li><a href="#" target="_blank">building a <strong>REST API</strong> on the website so other technologies can communicate with it <strong>(ie an android app)</strong></a> <strong class="text-warning">(In progress)</strong></li>
+<li><a href="#" target="_blank">Building an Android app using <strong>Kotlin</strong>, <strong>MVVM architecture</strong>, <strong>Retrofit2</strong>, <strong>Dagger2</strong>, and <strong>RxJava</strong> to communicate with the REST API on your website</a> <strong class="text-warning">(In progress)</strong></li>
+</ol>
 
-<p>Then we'll take development to the next level by building a <strong>REST API</strong> on the website so other technologies can communicate with it <strong>(ie an android app)</strong>. <strong class="text-warning">(In progress)</strong></p></span>
