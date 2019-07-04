@@ -29,6 +29,15 @@
 <p><strong>Then we'll take development to the next level by:</strong></p>
 <ol>
 <li><a href="#" target="_blank">building a <strong>REST API</strong> on the website so other technologies can communicate with it <strong>(ie an android app)</strong></a> <strong class="text-warning">(In progress)</strong></li>
-<li><a href="#" target="_blank">Building an Android app using <strong>Kotlin</strong>, <strong>MVVM architecture</strong>, <strong>Retrofit2</strong>, <strong>Dagger2</strong>, and <strong>RxJava</strong> to communicate with the REST API on your website</a> <strong class="text-warning">(In progress)</strong></li>
+<li>
+  <a href="#" target="_blank">Building an Android app to communicate with the REST API on your website using:  <strong class="text-warning">(In progress)</strong></a> 
+  <ul>
+    <li>Kotlin</li>
+    <li>MVVM architecture</li>
+    <li>Retrofit2</li>
+    <li>Dagger2</li>
+    <li>RxJava</li>
+  </ul>
+</li>
 </ol>
 
