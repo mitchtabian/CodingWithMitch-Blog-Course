@@ -28,9 +28,9 @@
 <br>
 <p><strong>Then we'll take development to the next level by:</strong></p>
 <ol>
-<li><a href="#" target="_blank">building a <strong>REST API</strong> on the website so other technologies can communicate with it <strong>(ie an android app)</strong></a> <strong class="text-warning">(In progress)</strong></li>
+<li><a href="#" target="_blank">Building a <strong>REST API</strong></a> on the website so other technologies can communicate with it <strong>(ie an android app)</strong> <strong class="text-warning">(In progress)</strong></li>
 <li>
-  <a href="#" target="_blank">Building an Android app to communicate with the REST API on your website using:  <strong class="text-warning">(In progress)</strong></a> 
+  <a href="#" target="_blank">Building an Android app to communicate with the REST API</a> on your website using:  <strong class="text-warning">(In progress)</strong>
   <ul>
     <li>Kotlin</li>
     <li>MVVM architecture</li>
