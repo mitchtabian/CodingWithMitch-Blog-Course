@@ -21,9 +21,9 @@
 <ol>
 <li><a href="https://codingwithmitch.com/courses/hosting-a-django-website-with-digital-ocean/hosting-django-website-digital-ocean/" target="_blank">Host your Website with Digital Ocean</a></li>
 <li><a href="https://codingwithmitch.com/courses/hosting-a-django-website-with-digital-ocean/registering-domain-name-namecheap/" target="_blank">Register a Custom Domain</a></li>
-<li><a href="#" target="_blank">Set up HTTPS on your Server</a> <strong class="text-warning">(In progress)</strong></li>
-<li><a href="#" target="_blank">Object Storage with Django (Digital Ocean Spaces S3 &amp; AWS)</a> <strong class="text-warning">(In progress)</strong></li>
-<li><a href="#" target="_blank">Send Emails with Django for Password Reset</a> <strong class="text-warning">(In progress)</strong></li>
+<li><a href="https://codingwithmitch.com/courses/hosting-a-django-website-with-digital-ocean/setup-https-nginx-and-certbot/" target="_blank">Set up HTTPS on your Server</a></li>
+<li><a href="https://codingwithmitch.com/courses/hosting-a-django-website-with-digital-ocean/object-storage-django-spaces-s3-and-aws/" target="_blank">Object Storage with Django (Digital Ocean Spaces S3 &amp; AWS)</a></li>
+<li><a href="https://codingwithmitch.com/courses/hosting-a-django-website-with-digital-ocean/send-password-reset-emails-production-env/" target="_blank">Send Emails with Django for Password Reset</a></li>
 </ol>
 <br>
 <p><strong>Then we'll take development to the next level by:</strong></p>
