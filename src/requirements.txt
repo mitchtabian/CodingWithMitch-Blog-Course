@@ -1,0 +1,5 @@
+Django==2.2.2
+Pillow==6.0.0
+python-decouple==3.1
+pytz==2019.1
+sqlparse==0.3.0
