@@ -5,7 +5,7 @@ from account.forms import RegistrationForm
 
 def registration_view(request):
 	context = {}
-	if request.POST:
+	if request.method == "POST":
 		form = RegistrationForm(request.POST)
 		if form.is_valid():
 			form.save()
